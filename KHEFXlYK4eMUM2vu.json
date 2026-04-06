@@ -222,7 +222,7 @@
         [],
         [
           {
-            "node": "Code in JavaScript",
+            "node": "Secret remover",
             "type": "main",
             "index": 0
           }
@@ -340,7 +340,7 @@
         ]
       ]
     },
-    "Code in JavaScript": {
+    "Secret remover": {
       "main": [
         [
           {
@@ -1129,7 +1129,7 @@
     },
     {
       "parameters": {
-        "jsCode": "return items.map(item => {\n  if (item.json.nodes) {\n    item.json.nodes.forEach(node => {\n      delete node.credentials;\n    });\n  }\n  return item;\n});"
+        "jsCode": "return items.map(item => {\n  if (item.json.nodes) {\n    item.json.nodes.forEach(node => {\n      \n      // Remove credentials\n      delete node.credentials;\n\n      // Remove webhook IDs (VERY important)\n      delete node.webhookId;\n\n      // Clean parameters (deep scan)\n      if (node.parameters) {\n        const clean = (obj) => {\n          for (const key in obj) {\n            if (\n              key.toLowerCase().includes('token') ||\n              key.toLowerCase().includes('api') ||\n              key.toLowerCase().includes('key') ||\n              key.toLowerCase().includes('secret')\n            ) {\n              obj[key] = 'REMOVED';\n            } else if (typeof obj[key] === 'object') {\n              clean(obj[key]);\n            }\n          }\n        };\n        clean(node.parameters);\n      }\n\n    });\n  }\n\n  // Remove top-level webhookId if present\n  delete item.json.webhookId;\n\n  return item;\n});"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1138,7 +1138,7 @@
         512
       ],
       "id": "3d5b1adc-87cf-46bb-afb2-00eef8b78515",
-      "name": "Code in JavaScript"
+      "name": "Secret remover"
     }
   ],
   "origin": "n8n",
@@ -1163,6 +1163,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2026-04-06T12:44:26.316Z",
-  "versionId": "77a3d6ad-4eb4-47bd-9de9-45000b8906b3"
+  "updatedAt": "2026-04-06T12:49:13.798Z",
+  "versionId": "3ccd4575-9db2-4793-8bd4-9517738c12dc"
 }
