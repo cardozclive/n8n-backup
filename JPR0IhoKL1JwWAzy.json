@@ -47,8 +47,7 @@
         0
       ],
       "id": "740d8b3c-b2a3-4a7e-93e3-9a63203819b6",
-      "name": "Send a text message",
-      "webhookId": "af95d4f5-6360-4ea2-83fb-846eb8f51b15"
+      "name": "Send a text message"
     }
   ],
   "origin": "n8n",
