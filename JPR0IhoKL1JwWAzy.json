@@ -1,0 +1,84 @@
+{
+  "active": false,
+  "activeVersion": null,
+  "activeVersionId": null,
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2026-03-21T09:05:08.252Z",
+  "id": "JPR0IhoKL1JwWAzy",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow 7",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e0004057-9731-435d-a4d0-d18b1a1e0e1b",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "chatId": "763199286",
+        "text": "🐼 Baby Panda Pipeline is LIVE! All systems ready!",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "740d8b3c-b2a3-4a7e-93e3-9a63203819b6",
+      "name": "Send a text message",
+      "webhookId": "af95d4f5-6360-4ea2-83fb-846eb8f51b15",
+      "credentials": {
+        "telegramApi": {
+          "id": "IbwBRWjgxVc2DG3e",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "origin": "n8n",
+  "pinData": {},
+  "repo": {
+    "owner": "cardozclive",
+    "name": "n8n-backup"
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "shared": [
+    {
+      "updatedAt": "2026-03-21T09:05:08.252Z",
+      "createdAt": "2026-03-21T09:05:08.252Z",
+      "role": "workflow:owner",
+      "workflowId": "JPR0IhoKL1JwWAzy",
+      "projectId": "ke76sf31TiQKO4MQ"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2026-03-21T09:05:52.107Z",
+  "versionId": "7c3cc925-c383-4c22-88a9-826fd29ea3da"
+}
