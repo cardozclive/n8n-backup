@@ -222,7 +222,7 @@
         [],
         [
           {
-            "node": "Execute Workflow",
+            "node": "Code in JavaScript",
             "type": "main",
             "index": 0
           }
@@ -334,6 +334,17 @@
         [
           {
             "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Execute Workflow",
             "type": "main",
             "index": 0
           }
@@ -514,13 +525,7 @@
         1008
       ],
       "webhookId": "93cca36a-a5f4-4919-b655-e0fa2cc2ca36",
-      "typeVersion": 1,
-      "credentials": {
-        "githubOAuth2Api": {
-          "id": "iLrUPO3oN4qAx3l4",
-          "name": "GitHub account"
-        }
-      }
+      "typeVersion": 1
     },
     {
       "parameters": {
@@ -549,13 +554,7 @@
         1184
       ],
       "webhookId": "286cabce-a3ec-4202-9d94-d005502d73cc",
-      "typeVersion": 1,
-      "credentials": {
-        "githubOAuth2Api": {
-          "id": "iLrUPO3oN4qAx3l4",
-          "name": "GitHub account"
-        }
-      }
+      "typeVersion": 1
     },
     {
       "parameters": {
@@ -636,12 +635,6 @@
       "webhookId": "5cf07ee9-70c6-48bf-b370-534315f2d48e",
       "typeVersion": 1,
       "alwaysOutputData": true,
-      "credentials": {
-        "githubOAuth2Api": {
-          "id": "iLrUPO3oN4qAx3l4",
-          "name": "GitHub account"
-        }
-      },
       "continueOnFail": true
     },
     {
@@ -679,7 +672,7 @@
       "name": "Execute Workflow",
       "type": "n8n-nodes-base.executeWorkflow",
       "position": [
-        2400,
+        2608,
         512
       ],
       "typeVersion": 1.2
@@ -738,13 +731,7 @@
       ],
       "webhookId": "244ea8da-851f-4afb-980c-5e5973b6a1af",
       "executeOnce": true,
-      "typeVersion": 1.1,
-      "credentials": {
-        "githubOAuth2Api": {
-          "id": "iLrUPO3oN4qAx3l4",
-          "name": "GitHub account"
-        }
-      }
+      "typeVersion": 1.1
     },
     {
       "parameters": {
@@ -826,13 +813,7 @@
         1296,
         512
       ],
-      "typeVersion": 1,
-      "credentials": {
-        "n8nApi": {
-          "id": "AbsX7g9UGSfuWsg1",
-          "name": "n8n account"
-        }
-      }
+      "typeVersion": 1
     },
     {
       "parameters": {
@@ -989,13 +970,7 @@
         1632
       ],
       "webhookId": "592f888e-3e41-49ce-b88a-d73f8756eac8",
-      "typeVersion": 1.1,
-      "credentials": {
-        "githubOAuth2Api": {
-          "id": "iLrUPO3oN4qAx3l4",
-          "name": "GitHub account"
-        }
-      }
+      "typeVersion": 1.1
     },
     {
       "parameters": {
@@ -1129,7 +1104,7 @@
       "parameters": {
         "content": "## Main workflow loop",
         "height": 601,
-        "width": 1831,
+        "width": 1956,
         "color": 7
       },
       "id": "734112c4-9175-4f50-a2d6-7970d2938624",
@@ -1156,6 +1131,19 @@
         864
       ],
       "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  if (item.json.nodes) {\n    item.json.nodes.forEach(node => {\n      delete node.credentials;\n    });\n  }\n  return item;\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2384,
+        512
+      ],
+      "id": "3d5b1adc-87cf-46bb-afb2-00eef8b78515",
+      "name": "Code in JavaScript"
     }
   ],
   "origin": "n8n",
@@ -1180,6 +1168,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2026-04-06T12:36:57.903Z",
-  "versionId": "4d71e646-7f03-4ab0-b042-6779263cfba3"
+  "updatedAt": "2026-04-06T12:44:26.316Z",
+  "versionId": "77a3d6ad-4eb4-47bd-9de9-45000b8906b3"
 }
