@@ -524,7 +524,6 @@
         2176,
         1008
       ],
-      "webhookId": "93cca36a-a5f4-4919-b655-e0fa2cc2ca36",
       "typeVersion": 1
     },
     {
@@ -553,7 +552,6 @@
         2176,
         1184
       ],
-      "webhookId": "286cabce-a3ec-4202-9d94-d005502d73cc",
       "typeVersion": 1
     },
     {
@@ -632,7 +630,6 @@
         1072,
         928
       ],
-      "webhookId": "5cf07ee9-70c6-48bf-b370-534315f2d48e",
       "typeVersion": 1,
       "alwaysOutputData": true,
       "continueOnFail": true
@@ -729,7 +726,6 @@
         1728,
         608
       ],
-      "webhookId": "244ea8da-851f-4afb-980c-5e5973b6a1af",
       "executeOnce": true,
       "typeVersion": 1.1
     },
@@ -759,7 +755,7 @@
                 ]
               },
               "renameOutput": true,
-              "outputKey": "n8n"
+              "outputKey": "REMOVED"
             },
             {
               "conditions": {
@@ -784,7 +780,7 @@
                 ]
               },
               "renameOutput": true,
-              "outputKey": "github"
+              "outputKey": "REMOVED"
             }
           ]
         },
@@ -867,7 +863,7 @@
                 ]
               },
               "renameOutput": true,
-              "outputKey": "new"
+              "outputKey": "REMOVED"
             },
             {
               "conditions": {
@@ -892,7 +888,7 @@
                 ]
               },
               "renameOutput": true,
-              "outputKey": "different"
+              "outputKey": "REMOVED"
             },
             {
               "conditions": {
@@ -916,7 +912,7 @@
                 ]
               },
               "renameOutput": true,
-              "outputKey": "same"
+              "outputKey": "REMOVED"
             }
           ]
         },
@@ -969,7 +965,6 @@
         2176,
         1632
       ],
-      "webhookId": "592f888e-3e41-49ce-b88a-d73f8756eac8",
       "typeVersion": 1.1
     },
     {
